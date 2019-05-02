@@ -20,7 +20,6 @@ resource "aws_elb" "webapp-elb" {
     interval            = 30
   }
 
-  instances                   = []
   cross_zone_load_balancing   = true
   idle_timeout                = 40
   connection_draining         = true
