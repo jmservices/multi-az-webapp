@@ -1,5 +1,6 @@
 # Infrastructure for Multi-AZ web application
 
+![alt Infrastructure Diagram](https://github.com/jmservices/multi-az-webapp/blob/master/docs/MultiAZ%20AutoScaling%20application.png)
 
 
 ## Tools used:
