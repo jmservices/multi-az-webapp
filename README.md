@@ -55,3 +55,27 @@ Terraform - deploy IaaC
             1. Command: terraform apply
             2. Wait for AWS resources creation.
         7. Wait for a couple of minutes for EC2 instances initialization and later copy “webapp_elb_dns_name” value to your browser to check if web app is available.
+   
+<br />
+<br />
+   
+# AutoScaling mechanisms
+
+<br />
+
+### CloudWatch Scaling CPU metric based:
+    Every two minutes check for ASG average CPU utilization.
+    Scale-out in case of CPU Utilization is higher or equal 40% => add 1 instance to ASG
+    Scale-in in case of CPU Utilization is lower or equal 10% => remove 1 instance from ASG
+    
+
+### List of pre-defined scheduling rules for autoscaling:
+    Peak time     => Starting from 1pm, min and desired capacity 6, max 9
+    Off peak time => Starting from 9pm, min and desired capacity 3, max 6
+    Night time    => Starting from 1am, min and desired capacity 1, max 6
+    Morning time  => Starting from 7am, min and desired capacity 3, max 6
+    
+        
+
+
+
