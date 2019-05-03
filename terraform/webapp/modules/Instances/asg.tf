@@ -124,7 +124,7 @@ resource "aws_cloudwatch_metric_alarm" "webapp_low_cpu_alert" {
   }
 
   alarm_description = "WebApp <10% CPU utilization"
-  alarm_actions     = ["${aws_autoscaling_policy.webapp_cpu_scale_out.arn}"]
+  alarm_actions     = ["${aws_autoscaling_policy.webapp_cpu_scale_in.arn}"]
 }
 
 resource "aws_autoscaling_policy" "webapp_cpu_scale_in" {
